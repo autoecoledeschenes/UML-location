@@ -1,0 +1,61 @@
+@startuml
+
+Title Contrat de location 
+
+Class Client {
+    Nom du client 
+    Adresse client 
+    Téléphone client 
+    }
+    
+Class Contrat { 
+    Date Contrat
+    Date remise
+    Lieu remise
+    Heure remise
+    Code de rabais appliqué
+    Kilométrage inclus 
+    Assurance collision? 
+    Suppression franchise? 
+    Nombre de jours location 
+    Heures en sus 
+    Kilomètres parcourus 
+    Montant facturé
+    }
+
+Class Véhicule {
+    Automatique
+    No immatriculation
+    No série
+    Marque (Honda, Chevrolet, …) 
+    Modèle (CX, CRX, …) 
+    Année - Climatisation 
+    Nombre portes 
+    Kilométrage actuel 
+    Catégorie (Économique, compacte, …) 
+    }
+    
+ 
+    
+Class Tarification {
+    Tarif Horaire 
+    Tarif quotidien
+    Tarif hebdomadaire 
+    Tarif kilométrage
+    Tarif assurance collision quotidien 
+    Montant franchise collision 
+    Tarif suppression de franchise quotidien 
+}
+
+Class Permis {
+    No permis de conduire 
+    Province permis
+}
+
+Class Localisation {
+    No Contrat Location
+    Lieu prise possession
+    }
+Client "1..1" --> "0..*" Contrat
+
+@enduml
